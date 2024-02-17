@@ -9,6 +9,8 @@ nme = input("Hello! What's your name?\n")
 print("Hello, %s\nMy name is Bitsy, Your personal PC asistant" %nme)
 ##### Main loop #####
 while True:
+    ##### Clears screen#####
+    os.system("cls")
     ##### asks what to do#####
     thing = input("What would you like to do, %s\n" %nme)
     ##### splits the input for procesesing #####
@@ -17,5 +19,6 @@ while True:
     if "open" in inst:
         pth = input("Enter the path of the file you would like to run:\n")
         webbrowser.open(pth)
-    if "control panel" in inst:
-        os.system("opensettings.bat")
+    if "say" in inst:
+        wd = input("What do you want me to say, %s:\n" %nme)
+        print(wd)
